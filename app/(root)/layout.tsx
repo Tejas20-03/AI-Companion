@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { Sidebar } from "@/components/sidebar";
 
 const RootLayout = ({ children }: {
     children: React.ReactNode
@@ -6,6 +7,10 @@ const RootLayout = ({ children }: {
     return (
         <div className="h-full">
             <Navbar />
+            <div className="hidden md:flex mt-16 w-28 flex-col fixed inset-y-0">
+                <Sidebar />
+
+            </div>
             <main className="md:pl-20 pt-16 h-full">
                 {children}
             </main>
